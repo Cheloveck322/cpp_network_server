@@ -8,6 +8,7 @@
 #include <array>
 #include <arpa/inet.h>
 #include <sstream>
+#include <iomanip>
 
 NetworkServer* g_server_instance{ nullptr }; //global server instance for signal handling
 
