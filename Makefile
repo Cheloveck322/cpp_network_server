@@ -46,11 +46,11 @@ run: all
 	@$(TARGET)
 
 .PHONY: test
-test: all test-client
-	@echo "Test client built. Run './bin/test-client' to test the server"
+test: all test-server
+	@echo "Test client built. Run './bin/test-server' to test the server"
 
-test-client: $(TESTDIR)/test_server.cpp | $(BINDIR)
-	$(CXX) $(CXXFLAGS) $< -o $(BINDIR)/test-client
+test-server: $(TESTDIR)/test_server.cpp | $(BINDIR)
+	$(CXX) $(CXXFLAGS) $< -o $(BINDIR)/test-server
 
 .PHONY: help
 help:
